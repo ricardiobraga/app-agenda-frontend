@@ -56,12 +56,12 @@ export default function FormUpdate(props){
 
             } catch (err) {
               console.log("erro ",err);
-            }           
+            }          
          
+            location.reload()      
         }else {
           alert("todos os campos devem ser preenchidos")
         } 
-        location.reload()      
 
     
   }
