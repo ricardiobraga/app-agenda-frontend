@@ -23,10 +23,10 @@ export default function FormUpdate(props){
         if(param && name && phoneDDD && phoneNumber && email){
         formData.append('myFile', param[0])
         formData.append('id', props.id) 
-        console.log("aqui: ",param[0].mozFullPath);
+        
         
         try {
-              await fetch('https://app-agenda-backend.herokuapp.com/updateInfo', {
+              await fetch('https://app-agenda-frontend.vercel.app/updateInfo', {
               method: 'PUT',            
               headers: { 'Content-Type': 'application/json'},                        
               body: JSON.stringify({
@@ -41,14 +41,14 @@ export default function FormUpdate(props){
               })         
               .then(res => res.json())
             
-             await fetch('https://app-agenda-backend.herokuapp.com/updateImage', {           
+             await fetch('https://app-agenda-frontend.vercel.app/updateImage', {           
               method:"POST",                  
               body: formData         
              })
              //.then(location.reload())
 
             } catch (err) {
-              console.log(err);
+              console.log("erro ",err);
             }           
          
         }else {

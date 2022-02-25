@@ -56,7 +56,7 @@ export default function Home() {
 
   useEffect(() => {
    
-    fetch('https://app-agenda-backend.herokuapp.com/agenda')
+    fetch('https://app-agenda-frontend.vercel.app/agenda')
     .then(res => {
       if(!res.ok) {throw res}
       return res.json()
@@ -112,7 +112,7 @@ export default function Home() {
 
       <main className={styles.main}>
       <div className={styles.formContainer}>
-                <form action="https://app-agenda-backend.herokuapp.com/" method="post" encType='multipart/form-data'>
+                <form action="https://app-agenda-frontend.vercel.app/" method="post" encType='multipart/form-data'>
                 <img className={styles.formImage} src='/imgs/avatarUpload.png' alt="Upload Image"/>
                 <div className={styles.imagePath}>{imageName}</div> 
                 <label className={styles.uploadLabel} htmlFor='file' >Selecionar Foto</label>
