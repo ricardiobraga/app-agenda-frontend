@@ -9,6 +9,8 @@ export default function FormUpdate(props){
   const [phoneNumber, setPhoneNumber] = useState(props.phoneNumber)
   const [email, setEmail] = useState(props.email)
 
+  const[loading, setLoading] = useState(false)
+
   
 
 
@@ -23,7 +25,7 @@ export default function FormUpdate(props){
     }, [phoneDDD, phoneNumber] )
    
    async function updateData(param){
-        console.log(param)
+        
         const formData = new FormData()
         
         
@@ -47,13 +49,13 @@ export default function FormUpdate(props){
 
               })         
               .then(res => res.json())
+              setLoading(true)
             
              await fetch('https://app-agenda-backend.herokuapp.com/updateImage', {           
               method:"POST",                  
               body: formData         
              })
              //.then(location.reload())
-
             } catch (err) {
               console.log("erro ",err);
             }          
@@ -70,6 +72,10 @@ export default function FormUpdate(props){
     return( 
         <>
            <div className={props.editForm ? styles.formContainerUpdate : styles.hideComponent}>
+                <div className={loading ? styles.loading : styles.hideComponent}>
+                  <img src="./imgs/loading.gif" alt="loading" />
+                  <p>loading</p>
+                </div>
                 <form action="/" method="post" encType='multipart/form-data'>
                 <button type="button" className={styles.btnClose } onClick={() => props.form(false) }>X</button>
                 <img className={styles.formUpdateImg} src={`https://app-agenda-backend.herokuapp.com/uploads/${props.imagePath}`} alt="Upload Image"/>

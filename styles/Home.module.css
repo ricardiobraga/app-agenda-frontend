@@ -302,6 +302,7 @@
   align-items: center;
   border-radius: 20px;
   padding: 20px;
+  height: 65%;
   width: 30%;
   gap: 10px;
   background-color: #272626;
@@ -315,6 +316,27 @@
 
 .hideComponent {
   display: none;
+}
+
+.loading{
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+  width: 30%;
+  height: 65%;
+  
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.loading p {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #e6f8ff;
 }
 
 
