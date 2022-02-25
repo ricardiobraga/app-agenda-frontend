@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-import DataContainer from '../components/DataContainer'
+import DataContainer from '../components/dataContainer'
 import { useEffect } from 'react'
 import FormUpdate from '../components/formUpdate'
 
@@ -83,7 +83,7 @@ export default function Home() {
     if(agenda){
       return agenda.map((item, i) => {
         return ( 
-          <DataContainer 
+          <dataContainer 
              key={i}
              id={item.id}
              imagePath={item.imagePath}

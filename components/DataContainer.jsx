@@ -20,7 +20,7 @@ export default function DataContainer(props) {
                     id: param
                 })
         })
-        //.then(location.reload())              
+                     
             
         
     }
