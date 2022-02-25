@@ -64,9 +64,9 @@ export default function Home() {
     .then(data => setAgenda(data))   
     
  
-
     
-  }, [agenda])
+    
+  }, [setAgenda])
 
   function buttonEditInfo(id, imagePath, name, phoneDDD, phoneNumber, email){
     setId(id)

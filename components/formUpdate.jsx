@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styles from '../styles/Home.module.css'
 
 export default function FormUpdate(props){
 
   const [imagePath, setImagePath] = useState('')
-  const [name, setName] = useState("props.name")
+  const [name, setName] = useState(props.name)
   const [phoneDDD, setPhoneDDD] = useState(props.phoneDDD)
   const [phoneNumber, setPhoneNumber] = useState(props.phoneNumber)
   const [email, setEmail] = useState(props.email)
@@ -14,6 +14,13 @@ export default function FormUpdate(props){
 
 
     const [arquivo, setArquivo] = useState()
+
+    useEffect( () => {
+      isNaN(phoneDDD) && setPhoneDDD('')
+      isNaN(phoneNumber) && setPhoneNumber('') 
+  
+  
+    }, [phoneDDD, phoneNumber] )
    
    async function updateData(param){
         console.log(param)
@@ -26,7 +33,7 @@ export default function FormUpdate(props){
         
         
         try {
-              await fetch('https://app-agenda-frontend.vercel.app/updateInfo', {
+              await fetch('https://app-agenda-backend.herokuapp.com/updateInfo', {
               method: 'PUT',            
               headers: { 'Content-Type': 'application/json'},                        
               body: JSON.stringify({
@@ -41,7 +48,7 @@ export default function FormUpdate(props){
               })         
               .then(res => res.json())
             
-             await fetch('https://app-agenda-frontend.vercel.app/updateImage', {           
+             await fetch('https://app-agenda-backend.herokuapp.com/updateImage', {           
               method:"POST",                  
               body: formData         
              })
@@ -60,40 +67,6 @@ export default function FormUpdate(props){
 
     
   }
-
-  function updateImage(formData) {
-     fetch('https://app-agenda-backend.herokuapp.com/updateImage', {           
-      method:"POST",                  
-      body: formData         
-     })
-     .then(alert("Cadastro Atualizado")) 
-     
-  }
-
-  function updateInfo(param){
-    fetch('https://app-agenda-backend.herokuapp.com/updateInfo', {
-      method: 'PUT',            
-      headers: { 'Content-Type': 'application/json'},                        
-      body: JSON.stringify({
-        id: props.id,
-        imagePath: param[0].name,
-        name: name,
-        phoneDDD: phoneDDD,
-        phoneNumber: phoneNumber,
-        email: email
-       })           
-       
-     })         
-     .then(res => res.json())
-     .then(fetch('https://app-agenda-backend.herokuapp.com/updateImage', {           
-      method:"POST",                  
-      body: formData         
-     }))  
-  }
-
-
-
-
    
    
     return( 
