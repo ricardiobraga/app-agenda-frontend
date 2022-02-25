@@ -1,112 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 .container {
-  padding: 0 2rem;
+  display: flex;
 }
 
 .main {
-  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
   padding: 4rem 0;
-  flex: 1;
+  
+  
+
+  background-color: #f0f9fd;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 100vh;
+  
+  background-color: #272626;
+}
+
+.dataContainer{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  overflow-y: scroll;
+  
+  
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f9fd;
 }
 
-.footer {
+.dataContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.dataContainerSpace{
+  width: 100%;
+  height: 60%;
+}
+
+.dataContainer ul{
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
+  justify-content: baseline;
   align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding:  0 ;
+  width: 100%;
+  height: 100%;
 }
 
-.footer a {
+
+
+.userData {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  flex-grow: 1;
+
+  margin-top: 20px;
+  padding-bottom: 10px;
+
+  gap:40px;
+  border-bottom: solid 1px #214957;
+
+  width: 50vw;
+  height: 120px;
+  
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.avatar {
+  width: 4.5em;
+  border-radius: 50%;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.info {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: max-content;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.info span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  color: #9ab8c3;
+  font-size: .8rem;
+  
 }
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
+.info p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+  
+  font-weight: 400;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  color: #214957;
+}
+.userData button {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  margin: 0;
+  border-radius: 10px;
+  color: #e6f8ff;
+  background-color: #9ab8c3;
+  
+ 
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.icon {
+  transform: scale(150%);
 }
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+  width: 100%;
+}
+
+
+.uploadLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: solid 1px #e6f8ff;
+  color: #9ab8c3;
+
+  width: 60%;
+  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; 
+  
+  margin-bottom: 40px;
+  
+  
+  
+}
+.uploadInput {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 8px;
+  font-size: 17px;
+  color: #b8b8b8;
+  
+}
+
+.imagePath {
+  color: #e6f8ff;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+}
+
+.imagePath span {
+  font-weight: 600;
+  color: #9ab8c3;
+}
+
+.formImage {
+  width: 8rem;
+  margin: 10px;
+  
+  
+}
+
+.label {
+  color: #9ab8c3;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input {
+  outline: none;
+  border: none;
+  width: 60%;
+  
+  border-radius: 30px;
+  border-bottom: solid 1px #e6f8ff;
+  background-color: #272626;
+  padding-bottom: 5px;
+
+  font-size: 1rem;
+  text-align: center;
+  color: #e6f8ff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.inputPhone{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 5px;
+  border-radius: 30px;
+  border-bottom: solid 1px #e6f8ff;
+  width: 60%;
+  
+}
+.inputPhoneDDD {
+  text-align: center;
+  
+  width: 15%;
+  outline: none;
+  border: none;
+  
+  color: #e6f8ff;
+  background-color: #272626;
+  
+  
+}
+.inputPhoneNumber {
+  text-align: center;
+  
+  width: 60%;
+  outline: none;
+  border: none;
+  
+  color: #e6f8ff;
+  background-color: #272626;
+  
+  
+
+}
+
+.formBtn{
+  margin-top: 40px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 60%;
+
+  background-color: #e6f8ff;
+  padding: 10px 10px;
+  color: #214957;
+  border-radius: 30px;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500; 
+}
+
+
+.formContainerUpdate {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.btnClose {
+  justify-self: flex-start;
+  align-self: flex-end;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  color: #9ab8c3;
+  background-color: #e6f8ff;
+}
+
+.formContainerUpdate form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+  width: 30%;
+  gap: 10px;
+  background-color: #272626;
+}
+
+.formUpdateImg {
+  width: 8rem;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+
+.hideComponent {
+  display: none;
+}
+
+
+
+
+
+
+
+
 
 @media (max-width: 600px) {
   .grid {
