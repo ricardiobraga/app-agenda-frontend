@@ -56,7 +56,7 @@ export default function Home() {
 
   useEffect(() => {
    
-    fetch('https://app-agenda-frontend.vercel.app/agenda')
+    fetch('https://app-agenda-backend.herokuapp.com/agenda')
     .then(res => {
       if(!res.ok) {throw res}
       return res.json()
