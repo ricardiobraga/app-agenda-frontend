@@ -60,10 +60,8 @@ export default function FormUpdate(props){
          
         }else {
           alert("todos os campos devem ser preenchidos")
-        }  
-
-
-        
+        } 
+        location.reload()      
 
     
   }
