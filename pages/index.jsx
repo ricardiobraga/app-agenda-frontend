@@ -47,26 +47,26 @@ export default function Home() {
       }       
   }
 
-  useEffect( () => {
-    isNaN(phoneDDD) && setPhoneDDD('')
-    isNaN(phoneNumber) && setPhoneNumber('') 
+  // useEffect( () => {
+  //   isNaN(phoneDDD) && setPhoneDDD('')
+  //   isNaN(phoneNumber) && setPhoneNumber('') 
 
 
-  }, [phoneDDD, phoneNumber] )
+  // }, [phoneDDD, phoneNumber] )
 
-  useEffect(() => {
+  // useEffect(() => {
    
-    fetch('https://app-agenda-backend.herokuapp.com/agenda')
-    .then(res => {
-      if(!res.ok) {throw res}
-      return res.json()
-    })    
-    .then(data => setAgenda(data))   
+  //   fetch('https://app-agenda-backend.herokuapp.com/agenda')
+  //   .then(res => {
+  //     if(!res.ok) {throw res}
+  //     return res.json()
+  //   })    
+  //   .then(data => setAgenda(data))   
     
  
 
     
-  }, [agenda])
+  // }, [agenda])
 
   function buttonEditInfo(id, imagePath, name, phoneDDD, phoneNumber, email){
     setId(id)
