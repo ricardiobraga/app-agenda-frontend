@@ -29,6 +29,13 @@ export default function Home() {
 
   const [agenda, setAgenda] = useState()
 
+
+  
+
+
+
+
+
   function cutName(param){
       
       
@@ -80,6 +87,9 @@ export default function Home() {
   }
   
   function renderData(agenda) {
+
+    
+
     if(agenda){
       return agenda.map((item, i) => {
         return ( 
