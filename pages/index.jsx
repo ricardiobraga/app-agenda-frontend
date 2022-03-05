@@ -7,6 +7,8 @@ import DataContainer from '../components/dataLoader'
 import { useEffect } from 'react'
 import FormUpdate from '../components/formUpdate'
 
+import TouchAppIcon from '@material-ui/icons/TouchApp'
+
 
 
 
@@ -28,7 +30,8 @@ export default function Home() {
   const [editForm, setEditForm] = useState(false)
 
   const [agenda, setAgenda] = useState()
-
+  
+  const [formDown, setFormDown] = useState(false)
 
   
 
@@ -121,8 +124,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <div className={styles.formContainer}>
-                <form action="https://app-agenda-backend.herokuapp.com/" method="post" encType='multipart/form-data'>
+      <div className={!formDown ? styles.formContainer : styles.formContainerDown }>
+                <form action="https://app-agenda-backend.herokuapp.com/" method="post" encType='multipart/form-data' className={styles.form}>
                 <img className={styles.formImage} src='/imgs/avatarUpload.png' alt="Upload Image"/>
                 <div className={styles.imagePath}>{imageName}</div> 
                 <label className={styles.uploadLabel} htmlFor='file' >Selecionar Foto</label>
@@ -141,6 +144,7 @@ export default function Home() {
                 <input className={styles.input} id='email' type="email" name='email' value={email} placeholder="e-mail" onChange={(e) => {setEmail(e.target.value)}}/>
                 <button className={styles.formBtn} type="submit">Cadastrar</button>
                 </form>
+                <button className={styles.rollDown} onClick={() => setFormDown(!formDown)}><TouchAppIcon className={styles.swipeIcon} /></button>
             </div>
             <div className={styles.dataContainer}>
 
