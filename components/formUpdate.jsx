@@ -72,10 +72,10 @@ export default function FormUpdate(props){
     return( 
         <>
            <div className={props.editForm ? styles.formContainerUpdate : styles.hideComponent}>
-                <div className={loading ? styles.loading : styles.hideComponent}>
-                  <img src="./imgs/loading.gif" alt="loading" />
-                  <p>loading</p>
-                </div>
+                  <div className={loading ? styles.loading : styles.hideComponent}>
+                    <img src="./imgs/loading.gif" alt="loading" />
+                    <p>loading</p>
+                  </div>
                 <form action="/" method="post" encType='multipart/form-data'>
                 <button type="button" className={styles.btnClose } onClick={() => props.form(false) }>X</button>
                 <img className={styles.formUpdateImg} src={`https://app-agenda-backend.herokuapp.com/uploads/${props.imagePath}`} alt="Upload Image"/>
