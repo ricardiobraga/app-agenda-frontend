@@ -166,6 +166,7 @@
 }
 .uploadInput {
   position: absolute;
+  visibility: hidden;
   z-index: -1;
   top: 10px;
   left: 8px;
@@ -349,10 +350,10 @@
 
 
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .formContainer {
     position: absolute;
-    top: -87vh;
+    top: -82vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -362,6 +363,7 @@
     background-color: #272626;
     gap: 10px;
 
+    z-index: 1;
     transition: 1s;
   }
   .formContainerDown {
@@ -376,8 +378,19 @@
     background-color: #272626;
     gap: 20px;
 
+    z-index: 1;
     transition: 1s;
   }
+
+  .dataContainerSpace{
+  width: 100%;
+  height: 20%;
+}
+
+.dataContainer ul{
+
+  height: 80%;
+}
 
   .form {
     height: 100%;
@@ -385,10 +398,65 @@
 
   .userData {
     display: flex;
-    flex-flow: row wrap;
+    justify-content: center;
+    row-gap: 20px;
+    flex-direction: column;
+    
+    
+
+    
+    
+    margin: 0;
+    width: 100vw;
+    height: auto;
+
+    margin-bottom: 20px;
+    
+    
     
   }
+  
+.userdataRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+
+
+
+  .avatar {
+    float:left;
+    width: 50px;
+    border-radius: 50%;
+    
+  }
+
+  .info {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    
+    display: flex;   
+    width: auto;
+  }
+
+  .info p {
+    font-size: .9rem;
+  }
+
+
  
+
+
+  .dataButtons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: 30%;
+    
+  }
   .rollDown {
     display: flex;
     justify-content: center;
@@ -396,7 +464,7 @@
     height: 15%;
     width: 100%;
     cursor: pointer;
-    background-color: #9ab8c3;
+    background-color: #272626;
     border: none;
     outline: none;
     color: #e6f8ff;
@@ -405,4 +473,5 @@
   .swipeIcon {
     transform: scale(2);
   }
+  
 }

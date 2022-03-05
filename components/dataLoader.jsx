@@ -30,34 +30,37 @@ export default function DataContainer(props) {
         <>          
                 
             <li key={props.i} className={styles.userData}>
-                <img className={styles.avatar} src={`https://app-agenda-backend.herokuapp.com/uploads/${props.imagePath}`} alt="avatar" />
-                <div className={styles.info}>
-                <span ><AccountCircleIcon /> nome: </span>
-                <p>{props.name}</p>
-                </div>            
-                <div className={styles.info}>
-                <span ><PhoneIcon /> telefone: </span>
-                <p>({props.phoneDDD}) {props.phoneNumber}</p>
-                </div>            
-                <div className={styles.info}>
-                <span ><EmailIcon /> email: </span>
-                <p>{props.email}</p>
-                </div>            
-                        
-                
-                <button><EditIcon className={styles.icon} onClick={ () => {
-                        props.buttonEditInfo(
-                            props.id,
-                            props.imagePath,
-                            props.name,
-                            props.phoneDDD,
-                            props.phoneNumber,
-                            props.email
-                                       
-                                       
-                                       )}}  />
-                                       </button>            
-                <button><DeleteIcon className={styles.icon} onClick={() => deleteData(props.id)} /> </button>            
+                <div className={styles.userdataRow }>
+                    <img className={styles.avatar} src={`https://app-agenda-backend.herokuapp.com/uploads/${props.imagePath}`} alt="avatar" />
+                    <div className={styles.info}>
+                    <span ><AccountCircleIcon /> nome: </span>
+                    <p>{props.name}</p>
+                    </div>            
+                    <div className={styles.info}>
+                    <span ><PhoneIcon /> telefone: </span>
+                    <p>({props.phoneDDD}) {props.phoneNumber}</p>
+                    </div>            
+                </div>
+                <div className={styles.userdataRow }>
+                    <div className={styles.info} >
+                    <span  ><EmailIcon /> email: </span>
+                    <p>{props.email}</p>
+                    </div>            
+                            
+                    <div className={styles.dataButtons}>
+                        <button><EditIcon className={styles.icon} onClick={ () => {
+                                props.buttonEditInfo(
+                                    props.id,
+                                    props.imagePath,
+                                    props.name,
+                                    props.phoneDDD,
+                                    props.phoneNumber,
+                                    props.email  
+                                )}}  />
+                        </button>            
+                        <button><DeleteIcon className={styles.icon} onClick={() => deleteData(props.id)} /> </button>            
+                    </div>
+                </div>
             </li>
                 
             
