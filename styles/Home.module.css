@@ -79,6 +79,21 @@
   
 }
 
+.userdataRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.dataButtons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  width: 30%;  
+}
+
 .avatar {
   width: 4.5em;
   border-radius: 50%;
