@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Agenda de Contatos
+Essa é uma aplicação de agenda de contato que permite o usuário cadastrar uma pessoa com foto, nome, telefone e e-mail.
+Um projeto feito para estudo utilizando para o Frontend NextJs e para o Backend Express com Sqlite.
+O Projeto está hospedado na Vercel e pode ser acessado através do [desse link](app-agenda-frontend.vercel.app)
+
+Mesmo sendo um projeto simples consegui aprender bastante durante o desenvolvimento.  
+
 
 ## Getting Started
 
