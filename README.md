@@ -1,9 +1,10 @@
 ## Agenda de Contatos
-Essa é uma aplicação de agenda de contato que permite o usuário cadastrar uma pessoa com foto, nome, telefone e e-mail.
+Essa é uma aplicação de agenda de contatos que permite o usuário cadastrar uma pessoa com foto, nome, telefone e e-mail.
 Um projeto feito para estudo utilizando para o Frontend NextJs e para o Backend Express com Sqlite.
-O Projeto está hospedado na Vercel e pode ser acessado através do [desse link](app-agenda-frontend.vercel.app)
 
-Mesmo sendo um projeto simples consegui aprender bastante durante o desenvolvimento.  
+O Projeto está hospedado na Vercel e pode ser acessado através [desse link](https://app-agenda-frontend.vercel.app)
+
+Mesmo sendo um projeto simples consegui aprender bastante durante o desenvolvimento.   
 
 
 ## Getting Started
